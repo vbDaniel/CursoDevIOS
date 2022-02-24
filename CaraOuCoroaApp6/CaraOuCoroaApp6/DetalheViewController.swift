@@ -7,23 +7,25 @@
 
 import UIKit
 
+
 class DetalheViewController: UIViewController {
 
+    
+    @IBOutlet weak var moedaImage: UIImageView!
+    
+    var randomNumber: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if randomNumber == 0{
+            //cara
+            moedaImage.image = UIImage(named: "moeda_cara")
+            
+        }
+        else if randomNumber == 1{
+            //cor
+            moedaImage.image = 
+        }
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

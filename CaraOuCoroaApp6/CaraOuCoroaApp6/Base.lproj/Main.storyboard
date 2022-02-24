@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S5b-6n-Xdm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Cara ou Coroa-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CaraOuCoroaApp6" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Cara ou Coroa" id="BYZ-38-t0r" customClass="ViewController" customModule="CaraOuCoroaApp6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,30 +43,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
+            <point key="canvasLocation" x="939.13043478260875" y="69.642857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Detalhe View Controller-->
         <scene sceneID="MZu-yX-wN6">
             <objects>
-                <viewController id="1n6-EL-kes" sceneMemberID="viewController">
+                <viewController id="1n6-EL-kes" customClass="DetalheViewController" customModule="CaraOuCoroaApp6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4VF-ih-Vai">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="ZOJ-IE-R1H">
-                                <rect key="frame" x="54.5" y="269" width="305" height="304"/>
+                                <rect key="frame" x="54.5" y="296" width="305" height="304"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moeda_cara" translatesAutoresizingMaskIntoConstraints="NO" id="5Nd-7L-KV3">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moeda_cara" translatesAutoresizingMaskIntoConstraints="NO" id="mOS-YH-33Q">
                                         <rect key="frame" x="0.0" y="0.0" width="305" height="304"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="305" id="GJN-6E-fLT"/>
-                                            <constraint firstAttribute="height" constant="304" id="Kfd-tw-nB0"/>
-                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="5Nd-7L-KV3" firstAttribute="centerX" secondItem="ZOJ-IE-R1H" secondAttribute="centerX" id="7bi-bw-lz3"/>
-                                    <constraint firstItem="5Nd-7L-KV3" firstAttribute="centerY" secondItem="ZOJ-IE-R1H" secondAttribute="centerY" id="9nD-9v-Zdm"/>
+                                    <constraint firstItem="mOS-YH-33Q" firstAttribute="centerX" secondItem="ZOJ-IE-R1H" secondAttribute="centerX" id="9iC-h2-Ep5"/>
+                                    <constraint firstItem="mOS-YH-33Q" firstAttribute="centerY" secondItem="ZOJ-IE-R1H" secondAttribute="centerY" id="cwY-ab-G9F"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -78,10 +74,31 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="y5l-of-AcY"/>
+                    <connections>
+                        <outlet property="moedaImage" destination="mOS-YH-33Q" id="wyg-hL-llT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ff-Nw-3Uo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="882.60869565217399" y="69.642857142857139"/>
+            <point key="canvasLocation" x="1792.753623188406" y="69.642857142857139"/>
+        </scene>
+        <!--Cara ou Coroa-->
+        <scene sceneID="TVF-Ki-ek4">
+            <objects>
+                <navigationController title="Cara ou Coroa" automaticallyAdjustsScrollViewInsets="NO" id="S5b-6n-Xdm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mQw-uW-7fD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZK1-Yy-a2z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1SW-p4-JO5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
         </scene>
     </scenes>
     <resources>

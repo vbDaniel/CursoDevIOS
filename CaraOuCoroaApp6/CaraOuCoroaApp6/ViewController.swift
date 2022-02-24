@@ -11,7 +11,9 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "jogarMoeda"{
-            let v
+            let viewControllerDestine = segue.destination as! DetalheViewController
+            viewControllerDestine.randomNumber = Int(arc4random_uniform(2))
+            
         }
     }
 
