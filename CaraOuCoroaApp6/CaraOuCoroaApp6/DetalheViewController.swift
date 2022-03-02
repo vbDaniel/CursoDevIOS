@@ -23,7 +23,7 @@ class DetalheViewController: UIViewController {
         }
         else if randomNumber == 1{
             //cor
-            moedaImage.image = 
+            moedaImage.image = UIImage(named: "moeda_coroa")
         }
         // Do any additional setup after loading the view.
     }
