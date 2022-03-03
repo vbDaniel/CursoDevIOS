@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1zp-sd-DpK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Anotações-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Anotacoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fundo" translatesAutoresizingMaskIntoConstraints="NO" id="Vwf-hz-hjI">
+                                <rect key="frame" x="-126" y="88" width="666" height="808"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="808" id="1WS-zh-6P9"/>
+                                    <constraint firstAttribute="width" constant="666" id="Vd3-X4-2v6"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QbQ-L8-Ffc">
+                                <rect key="frame" x="51" y="167.5" width="312" height="261"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CCg-yW-Kxu">
+                                        <rect key="frame" x="0.0" y="0.0" width="312" height="225"/>
+                                        <color key="backgroundColor" red="0.99919670819999995" green="0.99631196259999999" blue="0.79367369409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="312" id="5hr-Q1-6eb"/>
+                                            <constraint firstAttribute="height" constant="225" id="qmo-k2-OGR"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tX-AJ-z87">
+                                        <rect key="frame" x="0.0" y="230" width="312" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="312" id="5BQ-mQ-f9w"/>
+                                            <constraint firstAttribute="height" constant="31" id="gNh-nj-W3g"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="botao_salvar"/>
+                                        <connections>
+                                            <action selector="buttonSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rvw-u5-wV2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.32416382430000001" green="0.28220960499999997" blue="0.26076313849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vwf-hz-hjI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9i0-lk-tIM"/>
+                            <constraint firstItem="Vwf-hz-hjI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="44" id="BWf-4r-cql"/>
+                            <constraint firstItem="QbQ-L8-Ffc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Co0-WN-Cti"/>
+                            <constraint firstItem="QbQ-L8-Ffc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-150" id="bAK-X3-7ih"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Anotações" id="nyk-3t-naC"/>
+                    <connections>
+                        <outlet property="textField" destination="CCg-yW-Kxu" id="pHZ-VD-hxB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937.68115942028987" y="68.973214285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6Cb-UV-myB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1zp-sd-DpK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nah-jc-N7Z">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sJz-Hv-kLd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJz-Rx-Mi3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="27.536231884057973" y="68.973214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="botao_salvar" width="321" height="38"/>
+        <image name="fundo" width="768" height="462"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
