@@ -26,6 +26,17 @@ class ViewController: UIViewController {
         return ""
     }
     
+    //Esconde a barra de Status 
+    override var prefersStatusBarHidden: Bool{
+        return true
+    }
+    
+    //Oculta o teclado ao clicar na tela
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("Press")
+        view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
