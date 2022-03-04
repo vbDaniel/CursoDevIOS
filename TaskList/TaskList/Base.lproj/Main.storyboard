@@ -53,7 +53,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nXD-pQ-8Sq">
-                                <rect key="frame" x="20" y="64" width="280" height="63"/>
+                                <rect key="frame" x="20" y="84" width="280" height="63"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicione nova task:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQx-aW-JfY">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="21"/>
@@ -71,13 +71,17 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="FHx-ed-7FC"/>
+                                    <constraint firstAttribute="width" constant="280" id="Yc5-FE-2ZB"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2J-3t-cnX">
-                                <rect key="frame" x="117.5" y="157" width="85" height="31"/>
+                                <rect key="frame" x="95.5" y="177" width="129" height="31"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="WgW-qx-vEw"/>
-                                    <constraint firstAttribute="width" constant="85" id="jVA-J1-IM5"/>
+                                    <constraint firstAttribute="height" constant="31" id="8mM-Pe-c3D"/>
+                                    <constraint firstAttribute="width" constant="129" id="C22-Tm-8Rw"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -95,10 +99,10 @@
                         <viewLayoutGuide key="safeArea" id="mKI-TX-Zvm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Q2J-3t-cnX" firstAttribute="centerX" secondItem="UwW-v8-6CV" secondAttribute="centerX" id="780-Xl-8nt"/>
-                            <constraint firstItem="Q2J-3t-cnX" firstAttribute="top" secondItem="nXD-pQ-8Sq" secondAttribute="bottom" constant="30" id="7ab-oD-fj4"/>
-                            <constraint firstItem="nXD-pQ-8Sq" firstAttribute="centerY" secondItem="UwW-v8-6CV" secondAttribute="centerY" constant="-188.5" id="8gq-Sl-DaQ"/>
-                            <constraint firstItem="nXD-pQ-8Sq" firstAttribute="centerX" secondItem="UwW-v8-6CV" secondAttribute="centerX" id="D3W-IB-KB5"/>
+                            <constraint firstItem="nXD-pQ-8Sq" firstAttribute="centerX" secondItem="UwW-v8-6CV" secondAttribute="centerX" id="M0e-oK-tKr"/>
+                            <constraint firstItem="Q2J-3t-cnX" firstAttribute="top" secondItem="nXD-pQ-8Sq" secondAttribute="bottom" constant="30" id="M29-Lb-1ji"/>
+                            <constraint firstItem="nXD-pQ-8Sq" firstAttribute="top" secondItem="mKI-TX-Zvm" secondAttribute="top" constant="40" id="OwX-Wg-tCS"/>
+                            <constraint firstItem="Q2J-3t-cnX" firstAttribute="centerX" secondItem="UwW-v8-6CV" secondAttribute="centerX" id="b4L-Wf-jkT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ofi-DL-6z8"/>

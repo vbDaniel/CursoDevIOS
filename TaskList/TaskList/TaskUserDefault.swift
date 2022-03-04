@@ -13,7 +13,12 @@ class TaskUserDefault{
     let key = "listTask"
     var tasks: [String] = []
     
-    
+    func remove(indice: Int){
+        
+        tasks = list()
+        tasks.remove(at: indice)
+        UserDefaults.standard.set(tasks, forKey: key)
+    }
     func save(task: String){
         
         tasks = list()

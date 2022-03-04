@@ -15,8 +15,26 @@ class TaskTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete{
+            let task = TaskUserDefault()
+            task.remove(indice: indexPath.row)
+            updateList()
+        }
+    }
+    
+    func updateList(){
         let task = TaskUserDefault()
         tasks = task.list()
+        tableView.reloadData()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        let task = TaskUserDefault()
+        tasks = task.list()
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -33,7 +51,6 @@ class TaskTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        
         cell.textLabel?.text = tasks[indexPath.row]
         
         return cell
