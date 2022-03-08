@@ -21,11 +21,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
-        
-        
-        
-        
-        
+    
         
 //
 //        let latitude: CLLocationDegrees = -19.512654
