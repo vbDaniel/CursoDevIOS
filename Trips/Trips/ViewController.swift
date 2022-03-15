@@ -61,7 +61,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                 }
             }
         }
-            
     }
     func showLocal(latitude: Double, longitude: Double){
         //Exibe Local
